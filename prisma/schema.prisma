@@ -15,7 +15,7 @@ model Product {
   name                   String
   priceInCents           Int //Stripe usa em Cents entao é facil de integrar
   filePath               String
-  imagePaths             String
+  imagePath              String
   description            String
   isAvailableForPurchase Boolean  @default(true)
   createdAt              DateTime @default(now())

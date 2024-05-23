@@ -1,5 +1,8 @@
 import { Nav, NavLink } from "@/src/components/Nav";
 
+// Força a nao ter nenhum tipo de cache na pagina
+export const dynamic = "force-dynamic";
+
 export default function AdminLayout({
   children,
 }: Readonly<{
@@ -14,7 +17,7 @@ export default function AdminLayout({
         <NavLink href="/admin/orders">Sales</NavLink>
       </Nav>
 
-      {children}
+      <div className="container my-6">{children}</div>
     </>
   );
 }
