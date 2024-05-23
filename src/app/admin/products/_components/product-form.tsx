@@ -6,7 +6,7 @@ import { Label } from "@/src/components/ui/label";
 import { Textarea } from "@/src/components/ui/textarea";
 import { formatCurrency } from "@/src/lib/formatters";
 import { useState } from "react";
-import { addProduct } from "../../../_actions/products";
+import { addProduct } from "../../_actions/products";
 import { useFormState, useFormStatus } from "react-dom";
 
 export function ProductForm() {
