@@ -3,7 +3,7 @@ import { Nav, NavLink } from "@/src/components/nav";
 // Força a nao ter nenhum tipo de cache na pagina
 export const dynamic = "force-dynamic";
 
-export default function AdminLayout({
+export default function CustomerLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -11,10 +11,9 @@ export default function AdminLayout({
   return (
     <>
       <Nav>
-        <NavLink href="/admin">Dashboard</NavLink>
-        <NavLink href="/admin/products">Products</NavLink>
-        <NavLink href="/admin/users">customers</NavLink>
-        <NavLink href="/admin/orders">Sales</NavLink>
+        <NavLink href="/">Homer</NavLink>
+        <NavLink href="/products">Products</NavLink>
+        <NavLink href="/orders">My Orders</NavLink>
       </Nav>
 
       <div className="container my-6">{children}</div>
