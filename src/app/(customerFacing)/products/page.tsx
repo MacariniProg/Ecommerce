@@ -3,15 +3,15 @@ import {
   ProductCard,
 } from "@/src/components/product-card";
 import db from "@/src/db/db";
-import { Product } from "@prisma/client";
+import { cache } from "@/src/lib/cache";
 import { Suspense } from "react";
 
-function getProducts() {
+const getProducts = cache(() => {
   return db.product.findMany({
     where: { isAvailableForPurchase: true },
     orderBy: { name: "asc" },
   });
-}
+}, ["/products" + "getProducts"]);
 
 export default function ProductsPage() {
   return (
